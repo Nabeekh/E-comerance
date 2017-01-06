@@ -1,0 +1,25 @@
+<% if product.name.present? %>
+<div class="col-md-3 col-sm-6 hero-feature">
+	<div class="thumbnail">
+		<%= image_tag product.avatar.url(:medium) %>
+		<div class="caption">
+			<h3> <%= product.name %></h3>
+			<h4> PRICE : <%= product.price %></h4>
+			<% if product.QDiscount != 0 %>
+			<h4> discount on peice: <%= product.QDiscount %> </h4>
+			<% else %>
+			<h4>No discount offer </h4>
+			<% end %>
+			<% if product.quantity != 0 %>
+			<h4> ** IN STOCK ** </h4>
+			<%else%>
+			<h4> ** out of stock ** </h4>
+			<% end %>
+			<%#= form_for(@order, url: orders_path) do |f| %>
+			<%#hidden_field_tag  'product_id', product.id%>
+			<p><span class="glyphicon glyphicon-shopping-cart"></span> <%=link_to 'Add to cart' ,category_sub_category_product_orders_path(product_id: product.id , sub_category_id: product.sub_category_id) , method: 'post' %> </p>
+			<%#end%>
+		</div>
+	</div>
+</div>
+<% end %>

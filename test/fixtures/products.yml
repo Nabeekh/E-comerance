@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quantity: 1
+  name: MyString
+  price: 1
+  QDiscount: 1
+  sub_category: one
+
+two:
+  quantity: 1
+  name: MyString
+  price: 1
+  QDiscount: 1
+  sub_category: two

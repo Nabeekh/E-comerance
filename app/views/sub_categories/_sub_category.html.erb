@@ -1,0 +1,11 @@
+<% if sub_category.name.present? %>
+<div class="col-md-3 col-sm-6 hero-feature">
+ <div class="thumbnail">
+	<%= image_tag sub_category.avatar.url(:medium) %>
+		<div class="caption">
+		<h3> <%= sub_category.name %></h3>
+	 <p> <%=link_to 'Explore' , category_sub_category_path(id: sub_category.id, category_id: sub_category.category.id), :class => "btn btn-primary " %></p>
+		</div>
+</div>
+</div>
+<% end %>

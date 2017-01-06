@@ -1,0 +1,11 @@
+<div class=continer>
+<h2>Add new Category</h2>
+<%= form_for(@sub_category, url: category_sub_categories_path) do |f| %>
+<label> Write name of sub_category </label><br>
+<%= f.text_field :name, :rows => "8" %>
+<%= f.file_field :avatar %>
+<p>
+<%= f.submit "ADD", :class => "btn btn-primary"%>
+</p>
+<% end %>
+</div>
